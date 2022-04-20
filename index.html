@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App clima</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h3 class="title-colors-selec">Colors</h3>
+        <div id="toggle-colors" class="colors">
+            <div data-color= "linear-gradient(to right, #03001e, #7303c0, #ec38bc, #fdeff9)" class="colors__item colors__item--purple"></div>
+
+            <div data-color="linear-gradient(to right, #03001e, #c31432, #240b36)" class="colors__item colors__item--red"></div>
+
+            <div data-color="linear-gradient(to right, #03001e, #1488CC,#396afc, #2948ff)" class="colors__item colors__item--blue"></div>
+        
+            <div data-color="linear-gradient(to right, #03001e, #fc4a1a, #f7b733)" class="colors__item colors__item--orange"></div>
+        </div>
+    </header>
+    <div class="contenedor">
+        <div id="caja1">
+            <h1 id="temperatura-valor"></h1>
+            <h1 id="temperatura-descripcion"></h1>
+        </div>
+        <div id="caja2">
+            <h2 id="ubicacion"></h2>
+            <img id="icono-animado">
+        </div>
+        <div id="caja3">
+            <h3>Veloc. del viento</h3>
+            <h1 id="viento-velocidad"></h1>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

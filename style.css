@@ -1,0 +1,132 @@
+/*DECLARACIÓN DE VARIABLES*/
+:root{
+    --primary-color: linear-gradient(to right, #03001e, #7303c0, #ec38bc, #fdeff9)
+}
+/*APLICAR BORDER-BOX, FUENTE, MARGIN: 0, A TODOS LOS ELEMENTOS*/
+*{
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: azure;
+}
+/*ESTILIZACIÓN DEL TITULO - THEMES*/
+.title-colors-selec{
+    /*POSITION*/
+    position: absolute;
+    top: 0.1em;
+    left: 1.4em;
+    padding:0 .1em;
+
+    /*TEXT*/
+    font-size: 20px; 
+}
+/*TOOGLE COLORS, POSICIONAMIENTO DEL SELECTOR DE TEMAS*/
+.colors{
+    /*POSITION*/
+    position:absolute;
+    top: 3em;
+    left: 1.7em;
+    
+    /*BOX MODEL*/
+    display:flex;
+}
+/*ESTILIZACION DE LOS ITEMS, SELECTOR DE TEMAS*/
+.colors__item{
+    /*BOX MODEL*/
+    margin: 5px;
+    width: 25px;
+    height: 25px;
+
+    /*VISUAL*/
+    border: 1px solid #fff;
+
+    /*OTROS*/
+    cursor: pointer;
+}
+/*COLOR DE LOS TOGGLES*/
+.colors__item--purple{
+    background: linear-gradient(to right, #03001e, #7303c0, #ec38bc, #fdeff9);
+}
+.colors__item--blue{
+    background: linear-gradient(to right,#03001e, #1488CC, #396afc, #2948ff); 
+}
+.colors__item--orange{
+    background: linear-gradient(to right, #03001e, #fc4a1a, #f7b733);
+}
+.colors__item--red{
+    background: linear-gradient(to right, #03001e, #c31432, #240b36);
+}
+/* ESTILIZACIÓN DEL BODY */
+body{
+    /*POSITION*/
+    height: 98vh;
+    align-items: center;
+    justify-content: center;
+
+    /*BOX MODEL*/
+    display: flex;
+
+    /*VISUAL*/
+    background: var(--primary-color);
+    background-size: 400% 400%;
+
+    /*OTROS*/
+    animation: cambiar 5s ease-in-out infinite;
+}
+/*ANIMACION DEL BACKGROUND*/
+@keyframes cambiar{
+    0%{background-position: 0 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0 50%;}
+}
+/*CONTENEDOR DE LAS CAJAS*/
+.contenedor {
+    /*BOX MODEL*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+/*TAMAÑO DEL ICONO*/
+#icono-animado{
+    width: 80%;
+    height: 70%;
+}
+/*ESTILIZACIÓN DE LAS CAJAS*/
+#caja1, #caja2, #caja3{
+    /*POSITION*/
+    position: relative;
+    
+    /*BOX MODEL*/
+    width: 200px; 
+    height: 200px;
+
+    /*VISUAL*/
+    box-shadow: -30px 30px 20px rgba(0,0,0,0.50);
+
+    /*TEXT*/
+    text-align:center;
+}
+/*MEDIA QUERIES*/
+@media (max-width: 645px) {
+    #caja1, #caja2, #caja3{
+        width: 150px; 
+        height: 150px;
+        font-size: 80%;
+    }   
+}
+@media (max-width: 500px) {
+    #caja1, #caja2, #caja3{
+        width: 100px; 
+        height: 100px;
+        font-size: 50%;
+    }   
+}
+/*COLOR DE LAS CAJAS*/
+#caja1{
+    background-color: rgba(0,0,0,0.767);
+}
+#caja2{
+    background-color: darkslateblue;
+}
+#caja3{
+    background-color: lightseagreen;
+}
