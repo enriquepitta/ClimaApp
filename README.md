@@ -19,4 +19,4 @@ Proyecto personal realizado por motivos de aprendizaje.
 
 ## Página
 ### Link directo a la pagina de la app
-https://enriquepitta.github.io/
+https://enriquepitta.github.io/ClimaApp/
